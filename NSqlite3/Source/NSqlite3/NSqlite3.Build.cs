@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Copyright 2024 ngcod, Inc. All Rights Reserved.
 
 using System.IO;
 using UnrealBuildTool;
@@ -10,13 +10,7 @@ public class NSqlite3 : ModuleRules
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		string PluginPath = ModuleDirectory;
-		
-		PublicIncludePaths.AddRange(
-			new string[] {
-				Path.Combine(PluginPath, "include")
-			}
-			);
-		
+
 		if (Target.Platform == UnrealTargetPlatform.Win64)
 		{
 			PublicAdditionalLibraries.Add(Path.Combine(PluginPath, "lib/Win64/sqlite3.lib"));

@@ -8,19 +8,19 @@
 	"CreatedBy": "ngcod",
 	"CreatedByURL": "",
 	"DocsURL": "",
-	"MarketplaceURL": "",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/e4538e9f02ec46c9b4f6609fb0e87161",
 	"SupportURL": "",
-	"EngineVersion": "5.2.0",
+	"EngineVersion":"5.3.2",
 	"CanContainContent": true,
-	"Installed": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
 	"Modules": [
 		{
 			"Name": "NSqlite3",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
-			"PlatformAllowList": [
-				"Win64"
-			]
+			"PlatformAllowList": [ "Win64"]
 		}
 	]
 }
