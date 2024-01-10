@@ -1,6 +1,5 @@
 // Copyright 2024 ngcod, Inc. All Rights Reserved.
 
-using System.IO;
 using UnrealBuildTool;
 
 public class NSqlite3 : ModuleRules
@@ -9,28 +8,11 @@ public class NSqlite3 : ModuleRules
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		string PluginPath = ModuleDirectory;
-
-		if (Target.Platform == UnrealTargetPlatform.Win64)
-		{
-			PublicAdditionalLibraries.Add(Path.Combine(PluginPath, "lib/Win64/sqlite3.lib"));
-		}
-		else if (Target.Platform == UnrealTargetPlatform.Android)
-		{
-			PublicAdditionalLibraries.Add(Path.Combine(PluginPath, "lib/Android/ARM64/libsqlite3.a"));
-			PublicAdditionalLibraries.Add(Path.Combine(PluginPath, "lib/Android/ARMv7/libsqlite3.a"));
-			PublicAdditionalLibraries.Add(Path.Combine(PluginPath, "lib/Android/x64/libsqlite3.a"));
-			PublicAdditionalLibraries.Add(Path.Combine(PluginPath, "lib/Android/x86/libsqlite3.a"));
-		}
-		else if (Target.Platform == UnrealTargetPlatform.IOS)
-		{
-			PublicAdditionalLibraries.Add(Path.Combine(PluginPath, "lib/iOS/libSQLite3.a"));
-		}
-
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
 				"Core",
+				"NSqlite3Library"
 			}
 			);
 		
