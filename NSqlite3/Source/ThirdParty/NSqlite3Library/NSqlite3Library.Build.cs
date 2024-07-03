@@ -27,5 +27,9 @@ public class NSqlite3Library : ModuleRules
 		{
 			PublicAdditionalLibraries.Add(Path.Combine(PluginPath, "lib/iOS/libSQLite3.a"));
 		}
+		else if (Target.Platform == UnrealTargetPlatform.Mac)
+		{
+			PublicAdditionalLibraries.Add(Path.Combine(PluginPath, "lib/Mac/libSqlite3Mac.a"));
+		}
 	}
 }
